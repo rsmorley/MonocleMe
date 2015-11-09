@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.ttf">
+            <string>FontAwesome</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -13,23 +18,77 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="View" customClass="viewcont">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKT-YC-JZD">
-                                <rect key="frame" x="284" y="550" width="46" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvQ-ec-K98" userLabel="Menu">
+                                <rect key="frame" x="0.0" y="525" width="600" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKT-YC-JZD">
+                                        <rect key="frame" x="275" y="24" width="51" height="27"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="15"/>
+                                        <state key="normal" title="camera">
+                                            <color key="titleColor" red="0.29803921570000003" green="0.54901960780000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="MIv-FO-Oiq" kind="show" id="iLx-Vq-HdW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1058823529" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Zbi-gT-cqt"/>
+                                    <constraint firstItem="aKT-YC-JZD" firstAttribute="centerX" secondItem="dvQ-ec-K98" secondAttribute="centerX" id="dF3-7d-9fV"/>
+                                    <constraint firstItem="aKT-YC-JZD" firstAttribute="centerY" secondItem="dvQ-ec-K98" secondAttribute="centerY" id="krb-5z-BL2"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the camera icon to get started!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30a-VT-dxK">
+                                <rect key="frame" x="162.5" y="288.5" width="275.5" height="23.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.1058823529" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59215686270000001" green="0.56078431370000004" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dvQ-ec-K98" secondAttribute="bottom" id="5eG-00-crZ"/>
+                            <constraint firstItem="30a-VT-dxK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AvI-1C-iFf"/>
+                            <constraint firstAttribute="trailing" secondItem="dvQ-ec-K98" secondAttribute="trailing" id="bZK-Xt-N6S"/>
+                            <constraint firstItem="30a-VT-dxK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mlL-j5-32Q"/>
+                            <constraint firstItem="dvQ-ec-K98" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pPT-jG-fF2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HfE-ZR-iBU"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="aKT-YC-JZD" id="9Aw-Z7-R8E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1RV-hK-eqi">
+            <objects>
+                <viewController id="MIv-FO-Oiq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RA5-e0-7CT"/>
+                        <viewControllerLayoutGuide type="bottom" id="YEn-31-n0T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jRx-Zv-1gs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="miF-Tw-agj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="369"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QyA-lg-Kqc">
@@ -46,7 +105,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-sh-GvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-450" y="420"/>
+            <point key="canvasLocation" x="-657" y="-272"/>
         </scene>
     </scenes>
 </document>

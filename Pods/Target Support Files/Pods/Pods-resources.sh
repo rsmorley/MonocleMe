@@ -58,10 +58,10 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
+  install_resource "FontAwesome/Resources/FontAwesome.ttf"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
+  install_resource "FontAwesome/Resources/FontAwesome.ttf"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

@@ -13,7 +13,7 @@
 		9D142ECA1BEE740600D8E4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D142EC81BEE740600D8E4B0 /* Main.storyboard */; };
 		9D142ECC1BEE740600D8E4B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D142ECB1BEE740600D8E4B0 /* Assets.xcassets */; };
 		9D142ECF1BEE740600D8E4B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D142ECD1BEE740600D8E4B0 /* LaunchScreen.storyboard */; };
-		9D33A1A51BEE87AD0042FD1C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D33A1A41BEE87AD0042FD1C /* fontawesome-webfont.ttf */; };
+		9D33A1A51BEE87AD0042FD1C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D33A1A41BEE87AD0042FD1C /* FontAwesome.ttf */; };
 		ED15DF63234EE177FAB38C1C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038B64A102DDA69D485926C6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		9D142ECB1BEE740600D8E4B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D142ECE1BEE740600D8E4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D142ED01BEE740600D8E4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D33A1A41BEE87AD0042FD1C /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		9D33A1A41BEE87AD0042FD1C /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		B958B25108457C056DF97503 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,7 @@
 		9D142EBF1BEE740600D8E4B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D33A1A41BEE87AD0042FD1C /* fontawesome-webfont.ttf */,
+				9D33A1A41BEE87AD0042FD1C /* FontAwesome.ttf */,
 				9D142EC01BEE740600D8E4B0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -167,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D142ECF1BEE740600D8E4B0 /* LaunchScreen.storyboard in Resources */,
-				9D33A1A51BEE87AD0042FD1C /* fontawesome-webfont.ttf in Resources */,
+				9D33A1A51BEE87AD0042FD1C /* FontAwesome.ttf in Resources */,
 				9D142ECC1BEE740600D8E4B0 /* Assets.xcassets in Resources */,
 				9D142ECA1BEE740600D8E4B0 /* Main.storyboard in Resources */,
 			);

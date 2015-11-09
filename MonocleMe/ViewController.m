@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "NSString+FontAwesome.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 
 @end
 
@@ -16,7 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self setup];
+}
+
+- (void)setup {
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100.f, 100.f, 100.f, 100.f)];
+//    [label setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:20]];
+//    [label setText:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-github"]];
+//    [self.view addSubview:label];
+    [self.cameraButton.titleLabel setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:40]];
+    [self.cameraButton setTitle:[NSString fontAwesomeIconStringForEnum:FACameraRetro ] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
