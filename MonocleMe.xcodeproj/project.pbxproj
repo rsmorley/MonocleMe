@@ -14,6 +14,8 @@
 		9D142ECC1BEE740600D8E4B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D142ECB1BEE740600D8E4B0 /* Assets.xcassets */; };
 		9D142ECF1BEE740600D8E4B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D142ECD1BEE740600D8E4B0 /* LaunchScreen.storyboard */; };
 		9D33A1A51BEE87AD0042FD1C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D33A1A41BEE87AD0042FD1C /* FontAwesome.ttf */; };
+		9D7CAB981BF1205B00D6B05A /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CAB971BF1205B00D6B05A /* PickerViewController.m */; };
+		9D7CAB9C1BF1263100D6B05A /* UIColor+Branding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CAB9B1BF1263100D6B05A /* UIColor+Branding.m */; };
 		ED15DF63234EE177FAB38C1C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038B64A102DDA69D485926C6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		9D142ECE1BEE740600D8E4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D142ED01BEE740600D8E4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D33A1A41BEE87AD0042FD1C /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		9D7CAB961BF1205B00D6B05A /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = SOURCE_ROOT; };
+		9D7CAB971BF1205B00D6B05A /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = SOURCE_ROOT; };
+		9D7CAB9A1BF1263100D6B05A /* UIColor+Branding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Branding.h"; sourceTree = "<group>"; };
+		9D7CAB9B1BF1263100D6B05A /* UIColor+Branding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Branding.m"; sourceTree = "<group>"; };
 		B958B25108457C056DF97503 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +81,7 @@
 		9D142EBE1BEE740600D8E4B0 /* MonocleMe */ = {
 			isa = PBXGroup;
 			children = (
+				9D7CAB991BF1260300D6B05A /* Categories */,
 				9D142EC21BEE740600D8E4B0 /* AppDelegate.h */,
 				9D142EC31BEE740600D8E4B0 /* AppDelegate.m */,
 				9D142EC51BEE740600D8E4B0 /* ViewController.h */,
@@ -84,6 +91,8 @@
 				9D142ECD1BEE740600D8E4B0 /* LaunchScreen.storyboard */,
 				9D142ED01BEE740600D8E4B0 /* Info.plist */,
 				9D142EBF1BEE740600D8E4B0 /* Supporting Files */,
+				9D7CAB961BF1205B00D6B05A /* PickerViewController.h */,
+				9D7CAB971BF1205B00D6B05A /* PickerViewController.m */,
 			);
 			path = MonocleMe;
 			sourceTree = "<group>";
@@ -95,6 +104,15 @@
 				9D142EC01BEE740600D8E4B0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D7CAB991BF1260300D6B05A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9D7CAB9A1BF1263100D6B05A /* UIColor+Branding.h */,
+				9D7CAB9B1BF1263100D6B05A /* UIColor+Branding.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		E18CC7E1BE25B4C925B54981 /* Pods */ = {
@@ -230,7 +248,9 @@
 			files = (
 				9D142EC71BEE740600D8E4B0 /* ViewController.m in Sources */,
 				9D142EC41BEE740600D8E4B0 /* AppDelegate.m in Sources */,
+				9D7CAB981BF1205B00D6B05A /* PickerViewController.m in Sources */,
 				9D142EC11BEE740600D8E4B0 /* main.m in Sources */,
+				9D7CAB9C1BF1263100D6B05A /* UIColor+Branding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
