@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NSString+FontAwesome.h"
+#import "UIColor+Branding.h"
 
 @interface ViewController ()
 
@@ -23,12 +24,9 @@
 }
 
 - (void)setup {
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100.f, 100.f, 100.f, 100.f)];
-//    [label setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:20]];
-//    [label setText:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-github"]];
-//    [self.view addSubview:label];
-    [self.cameraButton.titleLabel setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:40]];
+    [self.cameraButton.titleLabel setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:30]];
     [self.cameraButton setTitle:[NSString fontAwesomeIconStringForEnum:FACameraRetro ] forState:UIControlStateNormal];
+    [self.cameraButton.layer setBorderColor:[[UIColor brandColorWhite] CGColor]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sGZ-4x-clb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ret-Ut-yKv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -26,12 +26,20 @@
                                 <rect key="frame" x="0.0" y="525" width="600" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKT-YC-JZD">
-                                        <rect key="frame" x="275" y="24" width="51" height="27"/>
+                                        <rect key="frame" x="278.5" y="15.5" width="44" height="44"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="J5w-Ev-DCb"/>
+                                            <constraint firstAttribute="width" constant="44" id="toC-1F-4sk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="15"/>
                                         <state key="normal" title="camera">
                                             <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="MIv-FO-Oiq" kind="show" id="iLx-Vq-HdW"/>
                                         </connections>
@@ -46,7 +54,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the camera icon to get started!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30a-VT-dxK">
-                                <rect key="frame" x="162.5" y="288.5" width="275.5" height="23.5"/>
+                                <rect key="frame" x="162" y="288" width="275.5" height="23.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.3294117647" green="0.37254901959999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,6 +79,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Chooser View Controller-->
+        <scene sceneID="djr-Gn-SMh">
+            <objects>
+                <viewController id="ret-Ut-yKv" customClass="ChooserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aSr-3K-yrK"/>
+                        <viewControllerLayoutGuide type="bottom" id="M9e-Fe-LNk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lah-XP-7AA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mJr-Sx-UMV">
+                                <rect key="frame" x="0.0" y="20" width="600" height="505"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sUe-6V-tgK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="Uza-74-aHH">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L4m-PF-fPK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="L4m-PF-fPK" secondAttribute="bottom" id="MZO-KN-gG9"/>
+                                            <constraint firstAttribute="trailing" secondItem="L4m-PF-fPK" secondAttribute="trailing" id="cyg-HC-aLO"/>
+                                            <constraint firstItem="L4m-PF-fPK" firstAttribute="leading" secondItem="Uza-74-aHH" secondAttribute="leading" id="eiJ-nl-2fd"/>
+                                            <constraint firstItem="L4m-PF-fPK" firstAttribute="top" secondItem="Uza-74-aHH" secondAttribute="top" id="n6x-If-4Qn"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ret-Ut-yKv" id="yV0-Ph-Uz9"/>
+                                    <outlet property="delegate" destination="ret-Ut-yKv" id="IEg-2S-r3G"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.3294117647" green="0.37254901959999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="M9e-Fe-LNk" firstAttribute="top" secondItem="mJr-Sx-UMV" secondAttribute="bottom" constant="75" id="Jhl-l1-K8c"/>
+                            <constraint firstItem="mJr-Sx-UMV" firstAttribute="leading" secondItem="lah-XP-7AA" secondAttribute="leading" id="bNN-Fk-My4"/>
+                            <constraint firstAttribute="trailing" secondItem="mJr-Sx-UMV" secondAttribute="trailing" id="bv2-Ro-d9V"/>
+                            <constraint firstItem="mJr-Sx-UMV" firstAttribute="top" secondItem="aSr-3K-yrK" secondAttribute="bottom" id="tEC-Zn-5Za"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="mJr-Sx-UMV" id="U62-Tv-ZV7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1k-v8-Ky3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="1735"/>
+        </scene>
         <!--Picker View Controller-->
         <scene sceneID="1RV-hK-eqi">
             <objects>
@@ -91,35 +170,81 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgs-Jo-d25" userLabel="Menu">
                                 <rect key="frame" x="0.0" y="525" width="600" height="75"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-91-YX5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-91-YX5">
                                         <rect key="frame" x="278" y="15" width="44" height="44"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="F83-an-Xqn"/>
                                             <constraint firstAttribute="height" constant="44" id="znE-4b-sMc"/>
                                         </constraints>
-                                        <state key="normal" title="monocle"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" image="MonocleIcon"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="monocleButtonTouchUpInside:" destination="MIv-FO-Oiq" eventType="touchUpInside" id="pKg-04-Hag"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsD-hW-nzI">
+                                        <rect key="frame" x="518" y="16" width="44" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="0HJ-Ml-fwu"/>
+                                            <constraint firstAttribute="height" constant="44" id="WNO-r4-tj7"/>
+                                        </constraints>
+                                        <state key="normal" title="export"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="exportButtonTouchUpInside:" destination="MIv-FO-Oiq" eventType="touchUpInside" id="j52-lz-xSt"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1p-Ug-Quy">
+                                        <rect key="frame" x="20" y="16" width="44" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="2Cz-BN-ELk"/>
+                                            <constraint firstAttribute="width" constant="44" id="NgT-XH-bkm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="mirrorButtonTouchUpInside:" destination="MIv-FO-Oiq" eventType="touchUpInside" id="fO3-eS-8SZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="6da-z7-01g"/>
+                                    <constraint firstItem="GsD-hW-nzI" firstAttribute="centerY" secondItem="Qgs-Jo-d25" secondAttribute="centerY" id="BBo-Dp-mp2"/>
                                     <constraint firstItem="bpA-91-YX5" firstAttribute="centerX" secondItem="Qgs-Jo-d25" secondAttribute="centerX" id="Jzg-Oe-y1e"/>
                                     <constraint firstItem="bpA-91-YX5" firstAttribute="centerY" secondItem="Qgs-Jo-d25" secondAttribute="centerY" id="P5p-AD-jU6"/>
+                                    <constraint firstAttribute="trailing" secondItem="GsD-hW-nzI" secondAttribute="trailing" constant="38" id="PZw-PU-ad9"/>
+                                    <constraint firstItem="S1p-Ug-Quy" firstAttribute="leading" secondItem="Qgs-Jo-d25" secondAttribute="leading" constant="20" id="utz-OB-pEm"/>
+                                    <constraint firstItem="S1p-Ug-Quy" firstAttribute="centerY" secondItem="Qgs-Jo-d25" secondAttribute="centerY" id="yMz-3b-iuU"/>
                                 </constraints>
                             </view>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MonocleOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-gy-xff">
-                                <rect key="frame" x="256" y="256" width="88" height="88"/>
+                            <imageView hidden="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MonocleOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-gy-xff">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
                                 <animations/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="Tpw-0l-Uyo"/>
-                                    <constraint firstAttribute="width" constant="88" id="fD5-JC-b5s"/>
+                                    <constraint firstAttribute="height" constant="150" id="Tpw-0l-Uyo"/>
+                                    <constraint firstAttribute="width" constant="150" id="fD5-JC-b5s"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mRn-Iy-2sK" appends="YES" id="BSI-vV-5IX"/>
+                                    <outletCollection property="gestureRecognizers" destination="ZB0-jd-sbv" appends="YES" id="jRi-2I-Qyc"/>
+                                    <outletCollection property="gestureRecognizers" destination="tZ3-AM-RoY" appends="YES" id="2Kq-oR-lBe"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -137,12 +262,31 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="exportButton" destination="GsD-hW-nzI" id="BFj-HA-Chu"/>
                         <outlet property="imageView" destination="DO7-ha-cGf" id="Evl-9r-ger"/>
+                        <outlet property="mirrorButton" destination="S1p-Ug-Quy" id="0SJ-6v-CFi"/>
                         <outlet property="monocleButton" destination="bpA-91-YX5" id="heW-z9-fbi"/>
                         <outlet property="monocleImageView" destination="v2l-gy-xff" id="qYf-ge-4AV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="miF-Tw-agj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="mRn-Iy-2sK">
+                    <connections>
+                        <action selector="monocleImageDragged:" destination="MIv-FO-Oiq" id="lTl-Bu-ck0"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="ZB0-jd-sbv">
+                    <connections>
+                        <action selector="monocleImagePinched:" destination="MIv-FO-Oiq" id="2cD-9N-4rg"/>
+                        <outlet property="delegate" destination="MIv-FO-Oiq" id="Iwu-TW-vfP"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="tZ3-AM-RoY">
+                    <connections>
+                        <action selector="monocleImageRotated:" destination="MIv-FO-Oiq" id="G60-6g-MbL"/>
+                        <outlet property="delegate" destination="MIv-FO-Oiq" id="gck-nT-fun"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="885" y="369"/>
         </scene>
@@ -165,6 +309,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MonocleIcon" width="58" height="58"/>
         <image name="MonocleOverlay" width="286" height="494"/>
     </resources>
 </document>
