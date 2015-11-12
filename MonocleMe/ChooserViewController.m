@@ -102,7 +102,7 @@ int itemPadding = 1;
 
 #pragma mark - image picker delegate methods
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    self.selectedImage = info[UIImagePickerControllerEditedImage];
+    self.selectedImage = info[UIImagePickerControllerOriginalImage];
     
     [picker dismissViewControllerAnimated:YES completion:^{
         [self performSegueWithIdentifier:@"showEditor" sender:self];
@@ -127,8 +127,8 @@ int itemPadding = 1;
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
-        picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
         [self presentViewController:picker animated:YES completion:^{
             NSLog(@"camera");
         }];

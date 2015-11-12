@@ -8,6 +8,7 @@
         <mutableArray key="FontAwesome.ttf">
             <string>FontAwesome</string>
             <string>FontAwesome</string>
+            <string>FontAwesome</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -179,8 +180,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DO7-ha-cGf">
-                                <rect key="frame" x="0.0" y="64" width="600" height="461"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DO7-ha-cGf">
+                                <rect key="frame" x="0.0" y="80" width="600" height="445"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -263,6 +264,21 @@
                                     <outletCollection property="gestureRecognizers" destination="tZ3-AM-RoY" appends="YES" id="2Kq-oR-lBe"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-21-OBS">
+                                <rect key="frame" x="10" y="24" width="44" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="s6j-dO-CsP"/>
+                                    <constraint firstAttribute="height" constant="44" id="sfV-pC-Gpv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouchUpInside:" destination="MIv-FO-Oiq" eventType="touchUpInside" id="7fv-5A-6GM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.3294117647" green="0.37254901959999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
@@ -272,13 +288,22 @@
                             <constraint firstItem="YEn-31-n0T" firstAttribute="top" secondItem="Qgs-Jo-d25" secondAttribute="bottom" id="MV6-aB-cmL"/>
                             <constraint firstAttribute="trailing" secondItem="DO7-ha-cGf" secondAttribute="trailing" id="OOC-SO-F3W"/>
                             <constraint firstItem="Qgs-Jo-d25" firstAttribute="leading" secondItem="jRx-Zv-1gs" secondAttribute="leading" id="Uh4-Qg-5Ft"/>
+                            <constraint firstItem="GRp-21-OBS" firstAttribute="leading" secondItem="jRx-Zv-1gs" secondAttribute="leading" constant="10" id="VGP-nu-CvS"/>
                             <constraint firstItem="v2l-gy-xff" firstAttribute="centerY" secondItem="jRx-Zv-1gs" secondAttribute="centerY" id="Zr3-I9-bGG"/>
                             <constraint firstItem="DO7-ha-cGf" firstAttribute="leading" secondItem="jRx-Zv-1gs" secondAttribute="leading" id="dQI-VL-KcY"/>
                             <constraint firstItem="DO7-ha-cGf" firstAttribute="top" secondItem="RA5-e0-7CT" secondAttribute="bottom" id="l1t-E0-VAe"/>
+                            <constraint firstItem="DO7-ha-cGf" firstAttribute="top" secondItem="RA5-e0-7CT" secondAttribute="bottom" constant="60" id="ma9-rv-gud"/>
                             <constraint firstAttribute="trailing" secondItem="Qgs-Jo-d25" secondAttribute="trailing" id="xfL-A7-Jf4"/>
+                            <constraint firstItem="GRp-21-OBS" firstAttribute="top" secondItem="RA5-e0-7CT" secondAttribute="bottom" constant="4" id="xuu-9N-pBk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="l1t-E0-VAe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="GRp-21-OBS" id="1ot-mh-Dl4"/>
                         <outlet property="exportButton" destination="GsD-hW-nzI" id="BFj-HA-Chu"/>
                         <outlet property="imageView" destination="DO7-ha-cGf" id="Evl-9r-ger"/>
                         <outlet property="mirrorButton" destination="S1p-Ug-Quy" id="0SJ-6v-CFi"/>

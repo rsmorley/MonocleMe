@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *monocleImageView;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UIButton *exportButton;
 @property (weak, nonatomic) IBOutlet UIButton *mirrorButton;
 @property (weak, nonatomic) IBOutlet UIButton *monocleButton;
@@ -46,6 +47,8 @@
     [self.mirrorButton setTitle:[NSString fontAwesomeIconStringForEnum:FAArrowsH] forState:UIControlStateNormal];
     [self.mirrorButton setTitleColor:[UIColor brandColorWhite] forState:UIControlStateNormal];
     [self.mirrorButton.layer setBorderColor:[[UIColor brandColorWhite] CGColor]];
+    
+    [self.closeButton setTitle:[NSString fontAwesomeIconStringForEnum:FATimes] forState:UIControlStateNormal];
 }
 
 #pragma mark - gesture recognizer delegate
@@ -55,6 +58,10 @@
 }
 
 #pragma mark - actions
+
+- (IBAction)closeButtonTouchUpInside:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (IBAction)mirrorButtonTouchUpInside:(UIButton *)sender {
     UIImage *monocleImage = self.monocleImageView.image;
